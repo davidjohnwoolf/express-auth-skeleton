@@ -1,0 +1,24 @@
+{
+  "name": "express-auth-skeleton",
+  "version": "1.0.0",
+  "description": "A simple Express 4 mvc user authentication skeleton",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidjohnwoolf/express-auth-skeleton.git"
+  },
+  "keywords": [
+    "express",
+    "user",
+    "authentication"
+  ],
+  "author": "David Woolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidjohnwoolf/express-auth-skeleton/issues"
+  },
+  "homepage": "https://github.com/davidjohnwoolf/express-auth-skeleton#readme"
+}
