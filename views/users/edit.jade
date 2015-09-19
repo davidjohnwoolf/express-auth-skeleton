@@ -6,6 +6,7 @@ block content
   h2 Update User
 
   form(method='post', action='edit')
+    input(type='hidden', value='put', name='_method')
     div(class='field')
       label Username
       input(type='text', name='username', value='#{user.username}')

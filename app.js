@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express');
-var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var mongoose = require('mongoose');
@@ -20,8 +19,6 @@ app.set('port', process.env.PORT || 1337);
 mongoose.connect('mongodb://localhost/expressAuthSkeleton');
 
 // middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(session({
   // to use secure cookies use https and update code

@@ -2,8 +2,21 @@
 
 var express = require('express');
 var router = express.Router();
+var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var User = require('../models/user');
+
+// router middleware
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(methodOverride(function(req, res) {
+  // check for _method property in form requests
+  // see hidden input field in views
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    var method = req.body._method;
+    delete req.body._method;
+    return method;
+  }
+}));
 
 // require user session
 function requireLogin(req, res, next) {
@@ -24,17 +37,6 @@ function requireUser(req, res, next) {
     next();
   }
 }
-
-// router middleware
-router.use(methodOverride(function(req, res) {
-  // check for _method property in form requests
-  // see hidden input field in views
-  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-    var method = req.body._method;
-    delete req.body._method;
-    return method;
-  }
-}));
 
 // render login form
 router.get('/login', function(req, res) {
@@ -165,7 +167,7 @@ router.get('/:id/edit', requireUser, function(req, res) {
 });
 
 // update user
-router.post('/:id/edit', requireUser, function(req, res) {
+router.put('/:id/edit', requireUser, function(req, res) {
   // check if username is taken
   User.findOne({ username: req.body.username }, function(err, user) {
     if (err) {
