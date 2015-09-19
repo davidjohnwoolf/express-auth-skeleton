@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block title
+  title= title
+block content
+  h2 Login
+
+  form(method='post', action='login')
+    div(class='field')
+      label Username
+      input(type='text', name='username')
+    div(class='field')
+      label Password
+      input(type='password', name='password')
+    div(class='field')
+      input(class='button', type='submit', value='Login')

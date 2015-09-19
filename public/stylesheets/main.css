@@ -1,0 +1,78 @@
+/* General Styles */
+
+body {
+  color: #333;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+  padding: 0 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  padding-right: 10px;
+}
+
+nav {
+  padding: 0 20px;
+  margin: 0;
+  border-bottom: 2px #eee solid;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+a:hover {
+  color: #777;
+}
+
+/* Forms */
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input {
+  padding: 5px;
+}
+
+.field input[type=submit] {
+  padding: 5px 10px;
+}
+
+/* Button */
+
+.button {
+  border: 1px #777 solid;
+  color: #fff;
+  background: #999;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  color: #fff;
+  background: #777;
+}
+
+/* Notifications */
+.notice {
+  color: #008000;
+}
+
+.alert {
+ color: #b22222;
+}

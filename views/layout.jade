@@ -1,0 +1,38 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    block title
+      title Express Auth Skeleton
+    
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    
+  body
+    nav
+      ul
+        li
+          a(href='/') Home
+        if session.user
+          li
+            a(href='/users') Users
+          li
+            a(href='/users/#{session.user}') Account
+          li
+            a(href='/users/logout') Logout
+        else
+          li
+            a(href='/users/login') Login
+          li
+            a(href='/users/new') Sign Up
+    
+    div(id='wrapper')
+      if flashNotice
+        p(class='notice')= flashNotice
+      if flashAlert
+        p(class='alert')= flashAlert
+      block content
+    

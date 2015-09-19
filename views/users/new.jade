@@ -1,0 +1,19 @@
+extends ../layout.jade
+
+block title
+  title= title
+block content
+  h2 Create User
+
+  form(method='post', action='new')
+    div(class='field')
+      label Username
+      input(type='text', name='username')
+    div(class='field')
+      label Password
+      input(type='password', name='password')
+    div(class='field')
+      label Confirm Password
+      input(type='password', name='confirmation')
+    div(class='field')
+      input(class='button', type='submit', value='Create User')
