@@ -20,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/davidjohnwoolf/express-auth-skeleton/issues"
   },
-  "homepage": "https://github.com/davidjohnwoolf/express-auth-skeleton#readme"
+  "homepage": "https://github.com/davidjohnwoolf/express-auth-skeleton#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.13.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.7"
+  }
 }
