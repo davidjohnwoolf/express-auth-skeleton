@@ -30,6 +30,7 @@
     "express-session": "^1.11.3",
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
-    "mongoose": "^4.1.7"
+    "mongoose": "^4.1.7",
+    "morgan": "^1.6.1"
   }
 }
